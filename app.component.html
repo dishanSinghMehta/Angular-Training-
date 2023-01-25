@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular App</title>
+</head>
+<body>
+<!--
+  <h1>My First Angular App </h1>
+  <p>Lorem ipsum, dolor sit <strong>amet consectetur adipisicing elit. Ab, accusantium sit officiis maiores</strong> ratione aspernatur facilis voluptas veniam eaque facere. Neque eius necessitatibus cumque iure ducimus magnam quasi fugit officia?</p>
+  <app-binding></app-binding>-->
+
+
+<!--
+ <div *ngIf = " isUserLoggedIn ; else loggedOut " >
+  <h1>Welcome User </h1>
+</div>
+
+<ng-template #loggedOut>
+  <h1>User is Logged Out </h1>
+
+</ng-template>
+
+<button (click)="toggle()">Log Out</button>
+
+
+
+
+Select Country :<select (change)= "choice($event.target)">
+  <option>Select Your Country</option>
+  <option *ngFor="let c of countries" [value]="c.code"> {{ c.country }} </option>
+ </select> 
+ 
+
+ <div [ngSwitch]="selectedCountry">
+  <div *ngSwitchCase="'ind'" class="jumbotron">
+  <h1>India calling code is +91</h1>
+</div>
+
+<div [ngSwitch]="selectedCountry">
+  <div *ngSwitchCase="'arg'" class="jumbotron">
+  <h1>Argentina calling code is +54</h1>
+</div>
+
+<div [ngSwitch]="selectedCountry">
+  <div *ngSwitchCase="'aus'" class="jumbotron">
+  <h1>Australia calling code is +61</h1>
+</div>
+
+<div [ngSwitch]="selectedCountry">
+  <div *ngSwitchCase="'uk'" class="jumbotron">
+  <h1>United Kingdom calling code is +44</h1>
+</div>
+
+<div [ngSwitch]="selectedCountry">
+  <div *ngSwitchCase="'rsa'" class="jumbotron">
+  <h1>South Africa calling code is +27</h1>
+</div>
+
+<div [ngSwitch]="selectedCountry">
+  <div *ngSwitchCase="'urg'" class="jumbotron">
+  <h1>Uruguay calling code is +598</h1>
+</div>
+<div *ngSwitchDefault class="jumbotron">
+  {{selectedCountry}}
+  
+
+
+
+
+ 
+ <br>
+ <br>
+
+ 
+
+<ul>
+  <li *ngFor="let user of users">{{ user }}</li>
+</ul>
+
+Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+<br>
+<br>
+
+//Modal --
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<table class="table">
+<tr class="thead-dark">
+  <th>Index</th>
+<th>Id</th>
+<th>Name</th>
+<th>City</th>
+</tr>
+<tr *ngFor="let user of users;let i=index">
+  <td>{{i+1}}</td>
+  <td>{{user.id}}</td>
+  <td>{{user.name}}</td>
+  <td>{{user.city}}</td>
+</tr>
+</table>
+</div>-->
+
+
+
+
+
+<h1 class="text-centre">{{pageTitle}}</h1>
+
+<table class="table table-bordered">
+  <tr class="bg-primary">
+    <th>Id</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>username</th>
+    <th>DOB</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.city}}</td>
+    <td>{{user.username}}</td>
+   
+   <td>{{user.dob}}</td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
