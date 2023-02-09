@@ -1,0 +1,27 @@
+<h3 class="heading">All Contacts</h3>
+
+<p *ngIf="filteredArr.length===0">
+    
+      <strong>Sorry!</strong> no contacts to display.
+   
+  </p>
+<table class="table table-striped" *ngIf="filteredArr.length>0">
+    <thead>
+
+        <tr>
+            <!-- <th>Serial No.</th> -->
+            <th>Name</th>
+            <th>Contact Number</th>
+            <th>X</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let x of filteredArr">
+            <!-- <td>{{x.index}}</td> -->
+            <td>{{x.name | titlecase}}</td>
+            <td>{{x.phone}}</td>
+            <td><button class="btn btn-danger btn-sm" (click)="handleDelete(x.phone)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
